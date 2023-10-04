@@ -170,14 +170,6 @@ namespace SampleProj.Repository
             return _champions;
         }
 
-        
-
-
-
-        // public Champion GetChampionByName(string name)
-        // {
-        //     return _champions.FirstOrDefault(champion => champion.Name == name) ?? new Champion();
-        // }
 
 
 
