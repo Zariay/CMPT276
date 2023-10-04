@@ -1,0 +1,18 @@
+
+@* Index.cshtml file. Located in Views/Champions *@
+@{
+    Layout = "_Layout"; // Specify the layout file you want to use
+}
+
+@model List<SampleProj.Models.Champion>
+
+<div class="champion-grid">
+    @foreach (var champion in Model)
+    {
+        <div class="champion-card">
+            <img src="@champion.ImageUrl" alt="@champion.Name" width="500" height="500" />
+            <h2>@champion.Name</h2>
+            <p>Category: @champion.Category</p>
+        </div>
+    }
+</div>

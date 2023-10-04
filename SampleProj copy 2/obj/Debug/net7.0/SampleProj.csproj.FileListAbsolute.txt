@@ -1,0 +1,90 @@
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/appsettings.Development.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/appsettings.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/SampleProj.staticwebassets.runtime.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/SampleProj
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/SampleProj.deps.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/SampleProj.runtimeconfig.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/bin/Debug/net7.0/SampleProj.pdb
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.AssemblyInfoInputs.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.AssemblyInfo.cs
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.csproj.CoreCompileInputs.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.MvcApplicationPartsAssemblyInfo.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.RazorAssemblyInfo.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.RazorAssemblyInfo.cs
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets/msbuild.SampleProj.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets/msbuild.build.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets.build.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/staticwebassets.development.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/scopedcss/bundle/SampleProj.styles.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/scopedcss/projectbundle/SampleProj.bundle.scp.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/refint/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.pdb
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/SampleProj.genruntimeconfig.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj/obj/Debug/net7.0/ref/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/appsettings.Development.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/appsettings.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/SampleProj.staticwebassets.runtime.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/SampleProj
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/SampleProj.deps.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/SampleProj.runtimeconfig.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/bin/Debug/net7.0/SampleProj.pdb
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.AssemblyInfoInputs.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.AssemblyInfo.cs
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.csproj.CoreCompileInputs.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.MvcApplicationPartsAssemblyInfo.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.RazorAssemblyInfo.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.RazorAssemblyInfo.cs
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets/msbuild.SampleProj.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets/msbuild.build.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets.build.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/staticwebassets.development.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/scopedcss/bundle/SampleProj.styles.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/scopedcss/projectbundle/SampleProj.bundle.scp.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/refint/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.pdb
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/SampleProj.genruntimeconfig.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy/obj/Debug/net7.0/ref/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/appsettings.Development.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/appsettings.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/SampleProj.staticwebassets.runtime.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/SampleProj
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/SampleProj.deps.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/SampleProj.runtimeconfig.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/bin/Debug/net7.0/SampleProj.pdb
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.AssemblyInfoInputs.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.AssemblyInfo.cs
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.csproj.CoreCompileInputs.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.MvcApplicationPartsAssemblyInfo.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.RazorAssemblyInfo.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.RazorAssemblyInfo.cs
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets/msbuild.SampleProj.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets/msbuild.build.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.SampleProj.props
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets.build.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/staticwebassets.development.json
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/scopedcss/bundle/SampleProj.styles.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/scopedcss/projectbundle/SampleProj.bundle.scp.css
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/refint/SampleProj.dll
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.pdb
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/SampleProj.genruntimeconfig.cache
+/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/Debug/net7.0/ref/SampleProj.dll
