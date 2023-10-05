@@ -6,6 +6,7 @@ namespace SampleProj.Controllers
     {
         public IActionResult Index(string champion_name)
         {
+            // test
             return View();
         }
     }
