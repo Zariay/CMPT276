@@ -1,0 +1,29 @@
+@* Items.cshtml file. Located in Views/Champions *@
+@{
+    Layout = "_Layout1"; // Specify the layout file you want to use
+}
+@model Champion
+<!--background override-->
+<style>
+    html{background: url(@Model.ImageUrl) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  body { 
+  margin-bottom: 60px;
+  background-color: #111; /* Dark background color */
+  background: url(@Model.ImageUrl) no-repeat center center fixed;
+  background-size: cover;
+  color: #fff; /* White text color */
+  font-family: 'Arial', sans-serif; /* Choose a suitable font */
+}
+</style>
+
+
+
+<h2>@Model.Name</h2>
+<p>Category: @Model.Category</p>
+
+<p>@Html.ActionLink("Return Back", "Index","")</p>
