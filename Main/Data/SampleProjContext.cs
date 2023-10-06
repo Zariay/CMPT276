@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Calculator.Models;
+using SampleProj.Models;
 
 namespace SampleProj.Data
 {
@@ -14,6 +14,6 @@ namespace SampleProj.Data
         {
         }
 
-        public DbSet<Calculator.Models.Account> Account { get; set; } = default!;
+        public DbSet<SampleProj.Models.Account> Account { get; set; } = default!;
     }
 }
