@@ -17,7 +17,7 @@ namespace SampleProj.Controllers
         public IActionResult Items(Champion champ)
         {
             champion=champ;
-            return View("~/Views/Champions/Items.cshtml", champ);
+            return View("~/Views/Items/Index.cshtml", champ);
         }
     }
 }
