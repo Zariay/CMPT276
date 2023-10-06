@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ritvik\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {}
+    "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ritvik\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {
+    "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ritvik\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
+        "projectUniqueName": "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
         "projectName": "SampleProj",
-        "projectPath": "C:\\Users\\Ritvik\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
-        "packagesPath": "C:\\Users\\Ritvik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ritvik\\Source\\Repos\\CMPT276\\Main\\obj\\",
+        "projectPath": "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ritvik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
