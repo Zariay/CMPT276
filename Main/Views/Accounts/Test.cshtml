@@ -1,0 +1,28 @@
+@model Calculator.Models.Account
+@{
+    ViewData["Title"] = "Test";
+}
+
+
+<h1>
+    Login page redirects here. Link this to the homepage.
+    <form action="/Accounts/Index" method="get">
+        <button class="hyperlink" button type="submit">This is the List of Users</button>
+    </form>
+</h1>
+
+@if(ViewData["user"] != null)
+{
+    <p>
+        You entered username: @ViewData["user"] and password: @ViewData["password"]
+        These values were found within the database.
+    </p>
+
+}
+
+else if(ViewData["user"] == null)
+{
+    <p>
+        You continued as a guest.
+    </p>
+}
