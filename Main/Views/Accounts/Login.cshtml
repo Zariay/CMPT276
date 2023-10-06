@@ -1,0 +1,90 @@
+@model SampleProj.Models.Account
+
+<style>
+    #divisor{
+        background-color: rgba(48,25,52,0.7);
+        height: 90%;
+        width: 18%;
+        position: absolute;
+        left: 80%;
+    }
+
+    #loginDiv {
+        position: absolute;
+        background-color:transparent;
+        font-palette: dark;
+        top: 20%;
+        left: 82%;
+        font-weight: bold;
+    }
+
+    #error-message {
+        position: absolute;
+        right: 55px;
+        top: 410px;
+        color: red;
+        font-weight: bold;
+    }
+
+    .hyperlink {
+        background: none;
+        border: none;
+        color: black; /* Change the color to match your link color */
+        cursor: pointer;
+        padding: 0;
+        font: inherit;
+    }
+
+    .vertical {
+        border-left: 2px solid black;
+        position: absolute;
+        right: 20%;
+        bottom: 0;
+    }
+
+    body {
+        background-image: url('https://images4.alphacoders.com/132/1329192.jpeg');
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+</style>
+
+<div id="divisor"></div>
+
+<div id="loginDiv">
+
+    <h2 style="color: white">Sign In</h2>
+
+    @using (Html.BeginForm("Login", "Accounts", FormMethod.Post)) 
+    {
+        <div>
+            <input type="text" id="Username" name="Username" required placeholder="Username" style="border-radius:2px" />
+        </div>
+
+        <div>
+            <input type="password" id="Password" name="Password" required placeholder="Password" style="border-radius:2px" />
+        </div>
+        <button type="submit" style="border-radius:2px; background: brown">Login</button>
+    }
+
+    @using (Html.BeginForm("Test", "Accounts", FormMethod.Post))
+    {
+        <button class="hyperlink" button type="submit" style="color:white;">Continue as guest</button>
+    }
+
+    <form action="/Accounts/Create" method="get">
+        <button class="hyperlink" button type="submit" style="color:white">Make an account</button>
+    </form>
+
+    @if (ViewData["error"] != null)
+    {
+        <div id="error-message">
+            <p>Error: @ViewData["error"]</p>
+        </div>
+    }
+
+</div>
+
+<div class="vertical"></div>
