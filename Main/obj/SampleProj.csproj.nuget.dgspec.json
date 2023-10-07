@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/SampleProj.csproj": {}
+    "C:\\Users\\edwar\\source\\repos\\CMPT276\\Main\\SampleProj.csproj": {}
   },
   "projects": {
-    "/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/SampleProj.csproj": {
+    "C:\\Users\\edwar\\source\\repos\\CMPT276\\Main\\SampleProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/SampleProj.csproj",
+        "projectUniqueName": "C:\\Users\\edwar\\source\\repos\\CMPT276\\Main\\SampleProj.csproj",
         "projectName": "SampleProj",
-        "projectPath": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/SampleProj.csproj",
-        "packagesPath": "/Users/ramankumar/.nuget/packages/",
-        "outputPath": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/SampleProj copy 2/obj/",
+        "projectPath": "C:\\Users\\edwar\\source\\repos\\CMPT276\\Main\\SampleProj.csproj",
+        "packagesPath": "C:\\Users\\edwar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\edwar\\source\\repos\\CMPT276\\Main\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/ramankumar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\edwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +43,22 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
