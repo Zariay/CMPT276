@@ -627,3 +627,4 @@ C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\SampleProj.pdb
 C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\SampleProj.genruntimeconfig.cache
 C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\ref\SampleProj.dll
 >>>>>>> main
+C:\Users\edwar\source\repos\CMPT276\Main\obj\Debug\net7.0\SampleProj.csproj.AssemblyReference.cache
