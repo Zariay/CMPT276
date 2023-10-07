@@ -7,7 +7,11 @@ namespace SampleProj.Models
     public class Champion
     {
         public Champion()
+<<<<<<< HEAD
         {  
+=======
+        {
+>>>>>>> main
             Name = ""; // Set a default value for Name
             Category = ""; // Set a default value for Attribute
             ImageUrl = ""; // Set a default value for ImageUrl
