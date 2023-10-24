@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Main/obj/Debug/net7.0/SampleProj.dll",
+            "program": "${workspaceFolder}/Main/bin/Debug/net7.0/SampleProj.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Main",
             "stopAtEntry": false,

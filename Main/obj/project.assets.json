@@ -11277,24 +11277,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexs\\.nuget\\packages\\": {}
+    "/Users/ramankumar/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\SampleProj.csproj",
+      "projectUniqueName": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/SampleProj.csproj",
       "projectName": "SampleProj",
-      "projectPath": "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\SampleProj.csproj",
-      "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\obj\\",
+      "projectPath": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/SampleProj.csproj",
+      "packagesPath": "/Users/ramankumar/.nuget/packages/",
+      "outputPath": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/ramankumar/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11347,7 +11348,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
