@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/SampleProj.csproj": {}
+    "C:\\Users\\justi\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {}
   },
   "projects": {
-    "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/SampleProj.csproj": {
+    "C:\\Users\\justi\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/SampleProj.csproj",
+        "projectUniqueName": "C:\\Users\\justi\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
         "projectName": "SampleProj",
-        "projectPath": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/SampleProj.csproj",
-        "packagesPath": "/Users/ramankumar/.nuget/packages/",
-        "outputPath": "/Users/ramankumar/Documents/CurrentSemester/CMPT276/Oct24Group/CMPT276/Main/obj/",
+        "projectPath": "C:\\Users\\justi\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
+        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\justi\\Source\\Repos\\CMPT276\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ramankumar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
