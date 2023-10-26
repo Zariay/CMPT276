@@ -10,7 +10,8 @@
     @foreach (var champion in Model)
     {
         <div class="champion-card">
-            <a style="text-decoration: none;"href="@Url.Action("Items", "Items", new { Id =@champion.Id, Name=@champion.Name,
+            <!-- The URL will become shorter once we get the API/Database setup, but as of right now, data will be pass through the URL-->
+            <a style="text-decoration: none;"href="@Url.Action("Index", "Items", new { Id =@champion.Id, Name=@champion.Name,
              Category=@champion.Category, ImageUrl=@champion.ImageUrl })">
                 <img src="@champion.ImageUrl" alt="@champion.Name" width="500" height="500" />
                 <h2>@champion.Name</h2>

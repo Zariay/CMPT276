@@ -2,10 +2,10 @@
 @{
     Layout = "_Layout1"; // Specify the layout file you want to use
 }
-@model Champion
+@model ChampionStat
 <!--background override (temporary styling for background)-->
 <style>
-    html{background: url(@Model.ImageUrl) no-repeat center center fixed;
+    html{background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,7 +14,7 @@
     body { 
     margin-bottom: 60px;
     background-color: #111; /* Dark background color */
-    background: url(@Model.ImageUrl) no-repeat center center fixed;
+    background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
     background-size: cover;
     color: #fff; /* White text color */
     font-family: 'Arial', sans-serif; /* Choose a suitable font */
@@ -23,7 +23,91 @@
 
 
 
-<h2>@Model.Name</h2>
-<p>Category: @Model.Category</p>
+<h2>@Model.ChampionData.Name</h2>
+<p>Category: @Model.ChampionData.Category</p>
+
+
+<table style="float:left;">
+    <tr>
+        <th>Health</th>
+        <td>@Model.Health</td>
+    </tr>
+    <tr>
+        <th>Health Regeneration</th>
+        <td>@Model.HealthRegeneration</td>
+    </tr>
+    <tr>
+        <th>Mana</th>
+        <td>@Model.Mana</td>
+    </tr>
+    <tr>
+        <th>Mana Regeneration</th>
+        <td>@Model.ManaRegeneration</td>
+    </tr>
+    <tr>
+        <th>Attack Damage</th>
+        <td>@Model.AttackDamage</td>
+    </tr>
+    <tr>
+        <th>Attack Speed</th>
+        <td>@Model.AttackSpeed</td>
+    </tr>
+    <tr>
+        <th>Attack Range</th>
+        <td>@Model.AttackRange</td>
+    </tr>
+    <tr>
+        <th>Armor</th>
+        <td>@Model.Armor</td>
+    </tr>
+    <tr>
+        <th>Magic Resistance</th>
+        <td>@Model.MagicResistance</td>
+    </tr>
+    <tr>
+        <th>Movement Speed</th>
+        <td>@Model.MovementSpeed</td>
+    </tr>
+    <tr>
+        <th>Critical Strike Chance</th>
+        <td>@Model.CriticalStrikeChance</td>
+    </tr>
+    <tr>
+        <th>Critical Strike Damage</th>
+        <td>@Model.CriticalStrikeDamage</td>
+    </tr>
+    <tr>
+        <th>Life Steal</th>
+        <td>@Model.LifeSteal</td>
+    </tr>
+    <tr>
+        <th>Spell Vamp</th>
+        <td>@Model.SpellVamp</td>
+    </tr>
+    <tr>
+        <th>Tenacity</th>
+        <td>@Model.Tenacity</td>
+    </tr>
+    <tr>
+        <th>Energy</th>
+        <td>@Model.Energy</td>
+    </tr>
+</table>
+
+<!--I have tried to implement a dummy stat calculator, but having a lot of trouble with it.
+I think it would be a lot easier once we have the database and API set up so no need to create 
+dummy data for it. So fell free to edit this howevery you want-->
+<section class="item-container">
+    @foreach (var item in ViewBag.availableItems)
+    {
+        <div class="item-grid">
+            <p>@item.Name</p>
+        </div>
+    }
+</section>
+
+
+
+
 
 <p>@Html.ActionLink("Return Back", "Index","")</p>

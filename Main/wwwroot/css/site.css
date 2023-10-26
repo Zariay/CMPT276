@@ -150,3 +150,28 @@ body {
   background-color: #a4782c;
   color: #fff;
 }
+
+/* For Items Page*/
+.item-container{
+  width:50%;
+  float:right;
+  background-color: #111;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.item-grid {
+  border: 1px solid #1b1a25;
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #1b1a25;
+}
+
+.item-grid:hover {
+  background-color: #0056b3;
+}
