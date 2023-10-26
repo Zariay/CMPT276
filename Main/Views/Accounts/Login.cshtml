@@ -1,7 +1,7 @@
-@model SampleProj.Models.Account
+﻿@model SampleProj.Models.Account
 
 <style>
-    #divisor{
+    #divisor {
         background-color: rgba(48,25,52,0.7);
         height: 90%;
         width: 18%;
@@ -11,7 +11,7 @@
 
     #loginDiv {
         position: absolute;
-        background-color:transparent;
+        background-color: transparent;
         font-palette: dark;
         top: 20%;
         left: 82%;
@@ -57,7 +57,7 @@
 
     <h2 style="color: white">Sign In</h2>
 
-    @using (Html.BeginForm("Login", "Accounts", FormMethod.Post)) 
+    @using (Html.BeginForm("Login", "Accounts", FormMethod.Post))
     {
         <div>
             <input type="text" id="Username" name="Username" required placeholder="Username" style="border-radius:2px" />
