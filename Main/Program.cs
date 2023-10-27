@@ -27,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Champions}/{action=Index}/{id?}");//changed from Home to Champions
+    pattern: "{controller=Accounts}/{action=Login}/{id?}");//changed from Home to Champions
 
 app.Run();
