@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "Main\\bin\\Release\\net7.0\\publish",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/6b8ba72d-24ec-4343-8ab9-e369f44a72f1/resourceGroups/CMPT276LoLCalcResourceGroup2/providers/Microsoft.Web/sites/CMPT276LoLCalc"
+}
