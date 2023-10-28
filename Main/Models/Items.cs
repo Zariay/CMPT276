@@ -28,7 +28,7 @@ namespace SampleProj.Models
         public double bonus_ap { get; set; }                    // ability power
         public double bonus_ap_amp { get; set; }                // AP amp, so, deathcap
         public double bonus_MS_amp { get; set; }                // amp to movement speed
-        public int bonus_lethality { get; set; }
+        public int bonus_lethality { get; set; }                // used to calculate flat AR pen
         public int bonus_magic_pen { get; set; }
         public double bonus_percent_MR_pen { get; set; }
         public double bonus_percent_AR_pen { get; set; }
@@ -100,10 +100,18 @@ namespace SampleProj.Models
         public double ability_power { get; set; }         // AP
         public int magic_pen {  get; set; }            // AP lethality
         public double percent_MR_pen {  get; set; }       // MR pen %
-        public int lethality {  get; set; }            // lethality
+        public double armor_penetration {  get; set; }            // lethality
         public double percent_AR_pen { get; set; }        // armor pen %
         public int gold_generation { get; set; }          // gold gained per second
 
+        // At some point, we might want to have a function defined
+        //
+        // public ChampionStat(Champion this_champion)...
+        //
+        // which sets ChampionData to this_champion
+        //
+        // this could be useful in the future when something needs changing so I will
+        // leave this note here.
 
         public ChampionStat(){
             ChampionData= new Champion();
@@ -132,7 +140,7 @@ namespace SampleProj.Models
             ability_power = 0d;
             magic_pen = 0;
             percent_MR_pen = 0d;
-            lethality = 0;
+            armor_penetration = 0d;
             percent_AR_pen = 0d;
             gold_generation = 0;
         }
@@ -164,7 +172,7 @@ namespace SampleProj.Models
             ability_power = 0d;
             magic_pen = 0;
             percent_MR_pen = 0d;
-            lethality = 0;
+            armor_penetration = 0d;
             percent_AR_pen = 0d;
             gold_generation = 0;
         }
