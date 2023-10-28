@@ -44,6 +44,8 @@ namespace SampleProj.Models
         public double mana_growth { get; set; }
         public double base_mana_regen { get; set; }
         public double mana_regen_growth { get; set; }
+        public double base_energy {  get; set; } // alternative resource bar
+        public double base_energy_regen { get; set; } // alternative resource regen
 
         // Offensive statistics
         public double base_AD { get; set; }
