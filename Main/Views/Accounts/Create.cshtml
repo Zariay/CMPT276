@@ -1,20 +1,19 @@
-@model SampleProj.Models.Account
+﻿@model SampleProj.Models.Account
 
 @{
     ViewData["Title"] = "Create";
 }
 
 <style>
-    #thing{
-        position:relative;
+    #thing {
+        position: relative;
         width: 500px;
         height: 320px;
         background-color: rgba(32,42,80,0.9);
-        border:solid;
-        border-color:black;
+        border: solid;
+        border-color: black;
         left: 35%;
         margin-top: 20%;
-
     }
 
     body {
@@ -23,7 +22,6 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
-    
 </style>
 
 
@@ -31,7 +29,7 @@
     <br />
     <h1 style="text-align: center; color: gold; font-weight:bold">Create your Account</h1>
 
-    <hr width="500px" style=""/>
+    <hr width="500px" style="" />
 
     <div class="row" style="text-align: center">
         <div class="col-md-4" style="position: absolute; margin-left:125px; width: 250px">
@@ -51,30 +49,32 @@
                 </div>
             </form>
             <br />
-            <a asp-action="Index" style="color: gold">Back to List</a>   
+            <a asp-action="Index" style="color: gold">Back to List</a>
         </div>
     </div>
 
-    
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
 
-<style>
-    #errorDiv{
-        position:absolute;
-        left: 300px;
-        top: 380px;
-        color: red;
-        font-weight: bold;
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
     }
-</style>
 
-@if(ViewData["error"] != null)
-{
-    <div id="errorDiv">
-        <p> The username "@ViewData["user"]" is already taken. @ViewData["error"] </p>
-    </div>
-}
+    <style>
+        #errorDiv {
+            position: absolute;
+            left: 300px;
+            top: 380px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+    @if (ViewData["error"] != null)
+    {
+        <div id="errorDiv">
+            <p> The username "@ViewData["user"]" is already taken. @ViewData["error"] </p>
+        </div>
+    }
 </div>

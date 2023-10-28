@@ -9,85 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SampleProj
 build_property.RootNamespace = SampleProj
-build_property.ProjectDir = C:\Users\alexs\Desktop\CMPT276\Main\
+build_property.ProjectDir = C:\Users\Justin\Source\Repos\CMPT276\Main\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\alexs\Desktop\CMPT276\Main
+build_property.MSBuildProjectDirectory = C:\Users\Justin\Source\Repos\CMPT276\Main
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Create.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Accounts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Delete.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Accounts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Details.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Accounts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Edit.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Accounts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Index.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Accounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Login.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Accounts/Test.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcVGVzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Build/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVpbGRcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Champions/Index.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Champions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbXBpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Home/Index.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Home/Privacy.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Items/Index.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Items/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Shared/Error.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Shared/_Layout1.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Shared/_Layout1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/_ViewImports.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/_ViewStart.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Shared/_BuildLayout.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Shared/_BuildLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CdWlsZExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-pneep596l6
 
-[C:/Users/alexs/Desktop/CMPT276/Main/Views/Shared/_Layout.cshtml]
+[C:/Users/Justin/Source/Repos/CMPT276/Main/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-68a36cveht

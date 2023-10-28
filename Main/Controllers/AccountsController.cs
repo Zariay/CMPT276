@@ -10,6 +10,7 @@ using SampleProj.Data;
 using SampleProj.Models;
 using System.Drawing.Text;
 using System.Diagnostics;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Calculator.Controllers
 {
@@ -69,7 +70,7 @@ namespace Calculator.Controllers
 
             if (user != null)
             {
-                return RedirectToAction("Test", new { user = Username, pass = Password });
+                return RedirectToAction("Index", "Champions");
             }
             else
             {
