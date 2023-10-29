@@ -1,5 +1,7 @@
 
 // Champion.cs file. Located in the Models folder.
+using Newtonsoft.Json;
+using RiotSharp.Endpoints.StaticDataEndpoint;
 using System;
 
 namespace SampleProj.Models
@@ -13,9 +15,11 @@ namespace SampleProj.Models
             ImageUrl = ""; // Set a default value for ImageUrl
         }
         public int Id { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
-        public string Category { get; set; }
+        public string Category = "temporary";
         public string ImageUrl { get; set; }
+        public ImageStatic? image { get; set; }
 
 
         // The values for stats seem to mostly be doubles.
@@ -35,35 +39,129 @@ namespace SampleProj.Models
         //           growth <-> Increase per champion level 
 
         // Resource related statistics
-        public double base_HP { get; set; }
-        public double HP_growth { get; set; }
-        public double base_HP_regen { get; set; }
-        public double HP_regen_growth { get; set; }
+        [JsonProperty("armor")]
+        public double Armor { get; set; }
 
-        public double base_mana { get; set; }
-        public double mana_growth { get; set; }
-        public double base_mana_regen { get; set; }
-        public double mana_regen_growth { get; set; }
-        public double base_energy {  get; set; } // alternative resource bar
-        public double base_energy_regen { get; set; } // alternative resource regen
+        /// <summary>
+        /// Armor won per level.
+        /// </summary>
+        [JsonProperty("armorperlevel")]
+        public double ArmorPerLevel { get; set; }
 
-        // Offensive statistics
-        public double base_AD { get; set; }
-        public double AD_growth { get; set; }
-        public double base_AS { get; set; }
-        public double AS_growth { get; set; }
+        /// <summary>
+        /// Base attack damage.
+        /// </summary>
+        [JsonProperty("attackdamage")]
+        public double AttackDamage { get; set; }
 
-        // Defensive statistics
-        public double base_armor { get; set; }
-        public double armor_growth { get; set; }
-        public double base_MR { get; set; }
-        public double MR_growth { get; set; }
+        /// <summary>
+        /// Attack damage won per level.
+        /// </summary>
+        [JsonProperty("attackdamageperlevel")]
+        public double AttackDamagePerLevel { get; set; }
 
-        // Other statistics
-        public int range { get; set; }
-        public double base_MS { get; set; }
-        public int base_gold_generation {  get; set; } 
-        public double AS_ratio { get; set; }
+        /// <summary>
+        /// Base attack range.
+        /// </summary>
+        [JsonProperty("attackrange")]
+        public double AttackRange { get; set; }
+
+        /// <summary>
+        /// Base attack speed.
+        /// </summary>
+        [JsonProperty("attackspeedoffset")]
+        public double AttackSpeedOffset { get; set; }
+
+        /// <summary>
+        /// Attack speed won per level.
+        /// </summary>
+        [JsonProperty("attackspeedperlevel")]
+        public double AttackSpeedPerLevel { get; set; }
+
+        /// <summary>
+        /// Base crit percentage.
+        /// </summary>
+        [JsonProperty("crit")]
+        public double Crit { get; set; }
+
+        /// <summary>
+        /// Crit percentage won per level.
+        /// </summary>
+        [JsonProperty("critperlevel")]
+        public double CritPerLevel { get; set; }
+
+        /// <summary>
+        /// Base hit points.
+        /// </summary>
+        [JsonProperty("hp")]
+        public double Hp { get; set; }
+
+        /// <summary>
+        /// Hit points won per level.
+        /// </summary>
+        [JsonProperty("hpperlevel")]
+        public double HpPerLevel { get; set; }
+
+        /// <summary>
+        /// Base hit point regeneration.
+        /// </summary>
+        [JsonProperty("hpregen")]
+        public double HpRegen { get; set; }
+
+        /// <summary>
+        /// Hit points regeneration per level.
+        /// </summary>
+        [JsonProperty("hpregenperlevel")]
+        public double HpRegenPerLevel { get; set; }
+
+        /// <summary>
+        /// Base move speed.
+        /// </summary>
+        [JsonProperty("movespeed")]
+        public double MoveSpeed { get; set; }
+
+        /// <summary>
+        /// Base mana points.
+        /// </summary>
+        [JsonProperty("mp")]
+        public double Mp { get; set; }
+
+        /// <summary>
+        /// Mana points won per level.
+        /// </summary>
+        [JsonProperty("mpperlevel")]
+        public double MpPerLevel { get; set; }
+
+        /// <summary>
+        /// Base mana point regeneration.
+        /// </summary>
+        [JsonProperty("mpregen")]
+        public double MpRegen { get; set; }
+
+        /// <summary>
+        /// Mana point regeneration won per level.
+        /// </summary>
+        [JsonProperty("mpregenperlevel")]
+        public double MpRegenPerLevel { get; set; }
+
+        /// <summary>
+        /// Base spell block.
+        /// </summary>
+        [JsonProperty("spellblock")]
+        public double SpellBlock { get; set; }
+
+        /// <summary>
+        /// Spell block won per level.
+        /// </summary>
+        [JsonProperty("spellblockperlevel")]
+        public double SpellBlockPerLevel { get; set; }
+
+        public double LifeSteal { get; set; } = 0;
+
+        public double SpellVamp { get; set; } = 0;
+
+        public double Tenacity { get; set; } = 0;
+
 
 
     }

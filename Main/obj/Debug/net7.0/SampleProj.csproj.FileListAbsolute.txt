@@ -506,3 +506,4 @@ C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\refint\SampleProj.dll
 C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\SampleProj.pdb
 C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\SampleProj.genruntimeconfig.cache
 C:\Users\Justin\Source\Repos\CMPT276\Main\obj\Debug\net7.0\ref\SampleProj.dll
+C:\Users\justi\Source\Repos\CMPT276\Main\bin\Debug\net7.0\RiotSharp.dll

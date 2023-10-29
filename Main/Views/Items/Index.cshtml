@@ -2,10 +2,10 @@
 @{
     Layout = "_Layout1"; // Specify the layout file you want to use
 }
-@model ChampionStat
+@model Champion
 <!--background override (temporary styling for background)-->
 <style>
-    html{background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
+    html{background: @Model.image no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,7 +14,7 @@
     body { 
     margin-bottom: 60px;
     background-color: #111; /* Dark background color */
-    background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
+    background: @Model.image no-repeat center center fixed;
     background-size: cover;
     color: #fff; /* White text color */
     font-family: 'Arial', sans-serif; /* Choose a suitable font */
@@ -23,26 +23,26 @@
 
 
 
-<h2>@Model.ChampionData.Name</h2>
-<p>Category: @Model.ChampionData.Category</p>
+<h2>@Model.Name</h2>
+<p>Category: @Model.Category</p>
 
 
 <table style="float:left;">
     <tr>
         <th>Health</th>
-        <td>@Model.Health</td>
+        <td>@Model.Hp</td>
     </tr>
     <tr>
         <th>Health Regeneration</th>
-        <td>@Model.HealthRegeneration</td>
+        <td>@Model.HpPerLevel</td>
     </tr>
     <tr>
         <th>Mana</th>
-        <td>@Model.Mana</td>
+        <td>@Model.Mp</td>
     </tr>
     <tr>
         <th>Mana Regeneration</th>
-        <td>@Model.ManaRegeneration</td>
+        <td>@Model.MpRegen</td>
     </tr>
     <tr>
         <th>Attack Damage</th>
@@ -50,7 +50,7 @@
     </tr>
     <tr>
         <th>Attack Speed</th>
-        <td>@Model.AttackSpeed</td>
+        <td>@Model.AttackSpeedOffset</td>
     </tr>
     <tr>
         <th>Attack Range</th>
@@ -62,19 +62,19 @@
     </tr>
     <tr>
         <th>Magic Resistance</th>
-        <td>@Model.MagicResistance</td>
+        <td>@Model.SpellBlock</td>
     </tr>
     <tr>
         <th>Movement Speed</th>
-        <td>@Model.MovementSpeed</td>
+        <td>@Model.MoveSpeed</td>
     </tr>
     <tr>
         <th>Critical Strike Chance</th>
-        <td>@Model.CriticalStrikeChance</td>
+        <td>@Model.Crit</td>
     </tr>
     <tr>
         <th>Critical Strike Damage</th>
-        <td>@Model.CriticalStrikeDamage</td>
+        <td>@Model.Crit</td>
     </tr>
     <tr>
         <th>Life Steal</th>
@@ -87,10 +87,6 @@
     <tr>
         <th>Tenacity</th>
         <td>@Model.Tenacity</td>
-    </tr>
-    <tr>
-        <th>Energy</th>
-        <td>@Model.energy</td>
     </tr>
 </table>
 

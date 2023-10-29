@@ -13,7 +13,7 @@ namespace SampleProj.Controllers
     public class ItemsController : Controller
     {
 
-        private ChampionStat ChampStat;
+        //private ChampionStat ChampStat;
         //temporary list of items
         private List<Item>? AvailableItems;
         private List<Item>? EquippedItems;
@@ -66,7 +66,7 @@ namespace SampleProj.Controllers
             AvailableItems[9].Name = "Scope";
             AvailableItems[9].CriticalStrikeChanceBonus =0.2;
             EquippedItems = new List<Item>();
-            ChampStat= new ChampionStat();
+            //ChampStat= new ChampionStat();
             // FOR TESTING PURPOSES
             EquippedItems.Add(AvailableItems[0]);
             EquippedItems.Add(AvailableItems[1]);
@@ -78,13 +78,13 @@ namespace SampleProj.Controllers
         public IActionResult Index(Champion champ)
         {
             // set the new champion data to be part of the current stat calculation.
-            ChampStat.ChampionData=champ;
+           // ChampStat.ChampionData=champ;
             //setting the ViewBag
             ViewBag.availableItems = AvailableItems;
             ViewBag.equippedItems = EquippedItems;
 
-            calculate_stats();
-            return View("Index",ChampStat);
+            //calculate_stats();
+            return View("Index");
         }
 
 
@@ -97,7 +97,7 @@ namespace SampleProj.Controllers
         //
         // calculate_stats should be called when there are changes to items, or
         // changes to the champion being looked at.
-        private void calculate_stats()
+        /*private void calculate_stats()
         {
             // Reset ChampStat to the base state.
             ChampStat.clear();
@@ -364,7 +364,7 @@ namespace SampleProj.Controllers
 
 
 
-        }
+        }*/
 
 
 
