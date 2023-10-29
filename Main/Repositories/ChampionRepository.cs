@@ -8,6 +8,8 @@ using RiotSharp.Endpoints.Interfaces.Static;
 using RiotSharp.Endpoints.StaticDataEndpoint;
 using SampleProj.Models;
 using RiotSharp;
+using Azure;
+using Newtonsoft.Json;
 
 namespace SampleProj.Repository
 {
@@ -29,9 +31,9 @@ namespace SampleProj.Repository
             {
                 Champion c = new Champion();
                 c.Name = champ.Name;
-                c.image = champ.Image;
-                
-                if(c.image == null)
+                c.ImageUrl = champ.Image.Full;
+
+                if (c.ImageUrl == null)
                 {
                     System.Diagnostics.Debug.WriteLine("image is null");
                 }

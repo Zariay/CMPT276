@@ -4,10 +4,13 @@
 }
 @model ChampionStat
 <!--background override (temporary styling for background)-->
-<!--
+@{
+    var c = (Champion)@ViewData["i"];
+}
+
 <style>
     html {
-        background: url(champ.image) no-repeat center center fixed;
+        background: url("https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/@c.ImageUrl") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -23,12 +26,9 @@
         font-family: 'Arial', sans-serif; /* Choose a suitable font */
     }
 </style>
--->
-@{
-    var c = (Champion)@ViewData["i"];
-}
 
 
+@c.ImageUrl
 
 <h2>@c.Name</h2>
 <p>Category: @c.Category</p>
