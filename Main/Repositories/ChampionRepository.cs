@@ -32,7 +32,7 @@ namespace SampleProj.Repository
                 Champion c = new Champion();
                 c.Name = champ.Name;
                 c.ImageUrl = champ.Image.Full;
-
+                
                 if (c.ImageUrl == null)
                 {
                     System.Diagnostics.Debug.WriteLine("image is null");

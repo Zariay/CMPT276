@@ -6,11 +6,12 @@
 <!--background override (temporary styling for background)-->
 @{
     var c = (Champion)@ViewData["i"];
+    string splash = c.Name + "_0.jpg";
 }
 
 <style>
     html {
-        background: url("https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/@c.ImageUrl") no-repeat center center fixed;
+        background: url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/@splash") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -20,7 +21,7 @@
     body {
         margin-bottom: 60px;
         background-color: #111; /* Dark background color */
-        background: url("https://ddragon.leagueoflegends.com/cdn/11.22.1/img/champion/@c.ImageUrl") no-repeat center center fixed;
+        background: url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/@splash") no-repeat center center fixed;
         background-size: cover;
         color: #fff; /* White text color */
         font-family: 'Arial', sans-serif; /* Choose a suitable font */
