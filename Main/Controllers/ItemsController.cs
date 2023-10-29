@@ -13,13 +13,14 @@ namespace SampleProj.Controllers
     public class ItemsController : Controller
     {
 
-        //private ChampionStat ChampStat;
+        private ChampionStat ChampStat;
         //temporary list of items
         private List<Item>? AvailableItems;
         private List<Item>? EquippedItems;
 
-    //temporary fake stat data(until either database/API is working)
-        public ItemsController(){
+        //temporary fake stat data(until either database/API is working)
+        public ItemsController()
+        {
             AvailableItems = new List<Item>{
                 new Item(),
                 new Item(),
@@ -43,30 +44,30 @@ namespace SampleProj.Controllers
             AvailableItems[0].LifeStealBonus = 0.12;
             AvailableItems[0].MovementSpeedBonus = 355;
 
-            AvailableItems[1].Name = "Test_Item_2"; 
+            AvailableItems[1].Name = "Test_Item_2";
             AvailableItems[1].HealthBonus = 14d;
             AvailableItems[1].HealthRegenerationBonus = 1.7d;
             AvailableItems[1].MovementSpeedBonus = 100;
 
 
-            AvailableItems[2].Name = "Iron Helm"; 
+            AvailableItems[2].Name = "Iron Helm";
             AvailableItems[2].ArmorBonus = 20;
-            AvailableItems[3].Name = "Magical Ring";  
-            AvailableItems[3].ManaBonus=30;
-            AvailableItems[4].Name = "Light-weight Boots";  
-            AvailableItems[4].MovementSpeedBonus=20;
-            AvailableItems[5].Name = "Vampire Sword";  
-            AvailableItems[5].LifeStealBonus=0.2;
-            AvailableItems[6].Name = "Magical Shield";  
-            AvailableItems[6].MagicResistanceBonus=15;
-            AvailableItems[7].Name = "Healing Neckless"; 
-            AvailableItems[7].HealthRegenerationBonus =1.5;
-            AvailableItems[8].Name = "Metal Club"; 
+            AvailableItems[3].Name = "Magical Ring";
+            AvailableItems[3].ManaBonus = 30;
+            AvailableItems[4].Name = "Light-weight Boots";
+            AvailableItems[4].MovementSpeedBonus = 20;
+            AvailableItems[5].Name = "Vampire Sword";
+            AvailableItems[5].LifeStealBonus = 0.2;
+            AvailableItems[6].Name = "Magical Shield";
+            AvailableItems[6].MagicResistanceBonus = 15;
+            AvailableItems[7].Name = "Healing Neckless";
+            AvailableItems[7].HealthRegenerationBonus = 1.5;
+            AvailableItems[8].Name = "Metal Club";
             AvailableItems[8].CriticalStrikeDamageBonus = 20;
             AvailableItems[9].Name = "Scope";
-            AvailableItems[9].CriticalStrikeChanceBonus =0.2;
+            AvailableItems[9].CriticalStrikeChanceBonus = 0.2;
             EquippedItems = new List<Item>();
-            //ChampStat= new ChampionStat();
+            ChampStat = new ChampionStat();
             // FOR TESTING PURPOSES
             EquippedItems.Add(AvailableItems[0]);
             EquippedItems.Add(AvailableItems[1]);
@@ -76,17 +77,44 @@ namespace SampleProj.Controllers
         }
 
         public IActionResult Index(Champion champ)
-        {
+        {   
+
+           Champion ch = new Champion();
+            ch.Name = champ.Name;
+            ch.Armor = champ.Armor;
+            ch.ArmorPerLevel = champ.ArmorPerLevel;
+            ch.AttackDamage = champ.AttackDamage;
+            ch.AttackDamagePerLevel = champ.AttackDamagePerLevel;
+            ch.AttackRange = champ.AttackRange;
+            ch.AttackSpeedOffset = champ.AttackSpeedOffset;
+            ch.AttackSpeedPerLevel = champ.AttackSpeedPerLevel;
+            ch.Crit = champ.Crit;
+            ch.CritPerLevel = champ.CritPerLevel;
+            ch.Hp = champ.Hp;
+            ch.HpPerLevel = champ.HpPerLevel;
+            ch.HpRegen = champ.HpRegen;
+            ch.HpRegenPerLevel = champ.HpRegenPerLevel;
+            ch.MoveSpeed = champ.MoveSpeed;
+            ch.Mp = champ.Mp;
+            ch.MpPerLevel = champ.MpPerLevel;
+            ch.MpRegen = champ.MpRegen;
+            ch.MpRegenPerLevel = champ.MpRegenPerLevel;
+            ch.SpellBlock = champ.SpellBlock;
+            ch.SpellBlockPerLevel = champ.SpellBlockPerLevel;
+
+
             // set the new champion data to be part of the current stat calculation.
-           // ChampStat.ChampionData=champ;
+            ChampStat.ChampionData = ch;
             //setting the ViewBag
             ViewBag.availableItems = AvailableItems;
             ViewBag.equippedItems = EquippedItems;
 
             //calculate_stats();
+            ViewData["i"] = ch as Champion;
             return View("Index");
         }
 
+        //commenting out calculating stats while attempting to get the api working
 
         // calculate_stats modifies the current ChampStat object being
         // used as the current representation of the champion statistic
@@ -97,7 +125,9 @@ namespace SampleProj.Controllers
         //
         // calculate_stats should be called when there are changes to items, or
         // changes to the champion being looked at.
-        /*private void calculate_stats()
+        
+        /*
+        private void calculate_stats()
         {
             // Reset ChampStat to the base state.
             ChampStat.clear();
@@ -190,7 +220,7 @@ namespace SampleProj.Controllers
             // Health regen computation
             // HP5 = Base HP5 + Bonus HP5 + ((Level-1) * HP5 growth)
             ChampStat.HealthRegeneration = base_stats.base_HP_regen + HP5_bonus_total
-                                           + ((ChampStat.Level-1) * base_stats.HP_regen_growth);
+                                           + ((ChampStat.Level - 1) * base_stats.HP_regen_growth);
 
             // Heal + Shield power computation
             // Heal/Shield power is just equal to the bonus.
@@ -204,7 +234,7 @@ namespace SampleProj.Controllers
             // Mana regen computation
             // Mana regen = Base mana regen + Bonus mana regen + ((Level-1) * Mana regen growth)
             ChampStat.ManaRegeneration = base_stats.base_mana_regen + bonus_mana_regen_total
-                                         + ((ChampStat.Level-1) * base_stats.mana_regen_growth);
+                                         + ((ChampStat.Level - 1) * base_stats.mana_regen_growth);
 
             // AD computation
             // AD = Base AD + Bonus AD + ((Level-1) * AD Growth)
@@ -267,7 +297,7 @@ namespace SampleProj.Controllers
 
             }
             // Error! If you see MS = -1 something has gone wrong!
-            else 
+            else
             {
                 ChampStat.MovementSpeed = -1;
             }
@@ -306,7 +336,7 @@ namespace SampleProj.Controllers
             // Slow resist computation
             // We now subtract by 1 to undo our above multiplications by (1-j)
 
-            ChampStat.slow_resist = (1-bonus_slow_res_total);
+            ChampStat.slow_resist = (1 - bonus_slow_res_total);
 
             // Energy computation
             // Energy is not influenced by any items
@@ -364,8 +394,8 @@ namespace SampleProj.Controllers
 
 
 
-        }*/
-
+        }
+        */
 
 
 

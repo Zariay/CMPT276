@@ -2,97 +2,102 @@
 @{
     Layout = "_Layout1"; // Specify the layout file you want to use
 }
-@model Champion
+@model ChampionStat
 <!--background override (temporary styling for background)-->
+<!--
 <style>
-    html{background: @Model.image no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-    body { 
-    margin-bottom: 60px;
-    background-color: #111; /* Dark background color */
-    background: @Model.image no-repeat center center fixed;
-    background-size: cover;
-    color: #fff; /* White text color */
-    font-family: 'Arial', sans-serif; /* Choose a suitable font */
-  }
+    html {
+        background: url(champ.image) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    body {
+        margin-bottom: 60px;
+        background-color: #111; /* Dark background color */
+        background: url(champ.image) no-repeat center center fixed;
+        background-size: cover;
+        color: #fff; /* White text color */
+        font-family: 'Arial', sans-serif; /* Choose a suitable font */
+    }
 </style>
+-->
+@{
+    var c = (Champion)@ViewData["i"];
+}
 
 
 
-<h2>@Model.Name</h2>
-<p>Category: @Model.Category</p>
+<h2>@c.Name</h2>
+<p>Category: @c.Category</p>
 
 
 <table style="float:left;">
     <tr>
         <th>Health</th>
-        <td>@Model.Hp</td>
+        <td>@c.Hp</td>
     </tr>
     <tr>
         <th>Health Regeneration</th>
-        <td>@Model.HpPerLevel</td>
+        <td>@c.HpRegen</td>
     </tr>
     <tr>
         <th>Mana</th>
-        <td>@Model.Mp</td>
+        <td>@c.Mp</td>
     </tr>
     <tr>
         <th>Mana Regeneration</th>
-        <td>@Model.MpRegen</td>
+        <td>@c.MpRegen</td>
     </tr>
     <tr>
         <th>Attack Damage</th>
-        <td>@Model.AttackDamage</td>
+        <td>@c.AttackDamage</td>
     </tr>
     <tr>
         <th>Attack Speed</th>
-        <td>@Model.AttackSpeedOffset</td>
+        <td>@c.AttackSpeedOffset</td>
     </tr>
     <tr>
         <th>Attack Range</th>
-        <td>@Model.AttackRange</td>
+        <td>@c.AttackRange</td>
     </tr>
     <tr>
         <th>Armor</th>
-        <td>@Model.Armor</td>
+        <td>@c.Armor</td>
     </tr>
     <tr>
         <th>Magic Resistance</th>
-        <td>@Model.SpellBlock</td>
+        <td>@c.SpellBlock</td>
     </tr>
     <tr>
         <th>Movement Speed</th>
-        <td>@Model.MoveSpeed</td>
+        <td>@c.MoveSpeed</td>
     </tr>
     <tr>
         <th>Critical Strike Chance</th>
-        <td>@Model.Crit</td>
-    </tr>
-    <tr>
-        <th>Critical Strike Damage</th>
-        <td>@Model.Crit</td>
+        <td>@c.Crit</td>
     </tr>
     <tr>
         <th>Life Steal</th>
-        <td>@Model.LifeSteal</td>
+        <td>@c.LifeSteal</td>
     </tr>
     <tr>
         <th>Spell Vamp</th>
-        <td>@Model.SpellVamp</td>
+        <td>@c.SpellVamp</td>
     </tr>
     <tr>
         <th>Tenacity</th>
-        <td>@Model.Tenacity</td>
+        <td>@c.Tenacity</td>
     </tr>
 </table>
 
 <!--I have tried to implement a dummy stat calculator, but having a lot of trouble with it.
-I think it would be a lot easier once we have the database and API set up so no need to create 
+I think it would be a lot easier once we have the database and API set up so no need to create
 dummy data for it. So fell free to edit this howevery you want-->
+
+
 <section class="item-container">
     @foreach (var item in ViewBag.availableItems)
     {
@@ -101,9 +106,6 @@ dummy data for it. So fell free to edit this howevery you want-->
         </div>
     }
 </section>
-
-
-
 
 
 <p>@Html.ActionLink("Return Back", "Index","")</p>
