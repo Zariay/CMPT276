@@ -61,7 +61,9 @@ namespace SampleProj.Models
 
         // Other statistics
         public int range { get; set; }
-        public int base_MS { get; set; }
+        public double base_MS { get; set; }
+        public int base_gold_generation {  get; set; } 
+        public double AS_ratio { get; set; }
 
 
     }
