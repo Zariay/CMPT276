@@ -80,6 +80,7 @@ namespace SampleProj.Controllers
         {   
 
            Champion ch = new Champion();
+            ch.ImageUrl = champ.ImageUrl;
             ch.Name = champ.Name;
             ch.Armor = champ.Armor;
             ch.ArmorPerLevel = champ.ArmorPerLevel;
