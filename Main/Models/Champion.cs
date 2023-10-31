@@ -63,6 +63,7 @@ namespace SampleProj.Models
         public int range { get; set; }
         public double base_MS { get; set; }
         public int base_gold_generation {  get; set; } 
+        public double AS_ratio { get; set; }
 
 
     }

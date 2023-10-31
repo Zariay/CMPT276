@@ -3,24 +3,6 @@
     Layout = "_Layout1"; // Specify the layout file you want to use
 }
 @model ChampionStat
-<!--background override (temporary styling for background)-->
-<style>
-    html{background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-    body { 
-    margin-bottom: 60px;
-    background-color: #111; /* Dark background color */
-    background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
-    background-size: cover;
-    color: #fff; /* White text color */
-    font-family: 'Arial', sans-serif; /* Choose a suitable font */
-  }
-</style>
-
 
 
 <h2>@Model.ChampionData.Name</h2>
@@ -109,5 +91,4 @@ dummy data for it. So fell free to edit this howevery you want-->
 
 
 
-
-<p>@Html.ActionLink("Return Back", "Index","")</p>
+<p>@Html.ActionLink("Return Back", "Index","Champions","")</p>
