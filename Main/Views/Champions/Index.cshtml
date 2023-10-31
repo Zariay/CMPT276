@@ -12,12 +12,12 @@
         <div class="champion-card">
             <!-- The URL will become shorter once we get the API/Database setup, but as of right now, data will be pass through the URL-->
             <a style="text-decoration: none;" href="@Url.Action("Index", "Items", new { Id=@champion.Id, Name=@champion.Name, Category=@champion.Category, ImageUrl=@champion.ImageUrl,
-                Armor=@champion.Armor, ArmorPerLevel=@champion.ArmorPerLevel, AttackDamage=@champion.AttackDamage,
-                AttackDamagePerLevel=@champion.AttackDamagePerLevel, AttackRange=@champion.AttackRange, AttackSpeedOffset=@champion.AttackSpeedOffset,
-                AttackSpeedPerLevel=@champion.AttackSpeedPerLevel, Crit=@champion.Crit, CritPerLevel=@champion.CritPerLevel, Hp=@champion.Hp,
-                HpPerLevel=@champion.HpPerLevel, HpRegen=@champion.HpRegen, HpRegenPerLevel=@champion.HpRegenPerLevel, MoveSpeed=@champion.MoveSpeed,
-                Mp=@champion.Mp, MpPerLevel=@champion.MpPerLevel, MpRegen=@champion.MpRegen, MpRegenPerLevel=@champion.MpRegenPerLevel, SpellBlock=@champion.SpellBlock,
-                SpellBlockPerLevel=@champion.SpellBlockPerLevel, LifeSteal=@champion.LifeSteal, SpellVamp=@champion.SpellVamp, Tenacity=@champion.Tenacity})">
+                base_armor=@champion.base_armor, armor_growth=@champion.armor_growth, base_AD=@champion.base_AD,
+                AD_growth=@champion.AD_growth, range=@champion.range, base_AS=@champion.base_AS,
+                AS_growth=@champion.AS_growth, Crit=@champion.Crit, CritPerLevel=@champion.CritPerLevel, base_HP=@champion.base_HP,
+                HP_growth=@champion.HP_growth, base_HP_regen=@champion.base_HP_regen, HP_regen_growth=@champion.HP_regen_growth, base_MS=@champion.base_MS,
+                base_mana=@champion.base_mana, mana_growth=@champion.mana_growth, base_mana_regen=@champion.base_mana_regen, mana_regen_growth=@champion.mana_regen_growth, 
+                SpellBlock=@champion.SpellBlock, SpellBlockPerLevel=@champion.SpellBlockPerLevel, LifeSteal=@champion.LifeSteal, SpellVamp=@champion.SpellVamp, Tenacity=@champion.Tenacity})">
                 <img src="https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/@champion.ImageUrl" alt="@champion.Name" width="500" height="500" />
                 <h2>@champion.Name</h2>
                 <p>Category: @champion.Category</p>

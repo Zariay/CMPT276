@@ -6,7 +6,7 @@
 <!--background override (temporary styling for background)-->
 @{
     var c = (Champion)@ViewData["i"];
-    string splash = c.Name + "_0.jpg";
+    string splash = @c.Name + "_0.jpg";
 }
 
 <style>
@@ -27,85 +27,86 @@
         font-family: 'Arial', sans-serif; /* Choose a suitable font */
     }
 </style>
+<html>
+    <body>
+    <h2>@c.Name</h2>
+    <p>Category: @c.Category</p>
 
 
+    <table style="float:left;">
+        <tr>
+            <th>Health</th>
+            <td>@c.base_HP</td>
+        </tr>
+        <tr>
+            <th>Health Regeneration</th>
+            <td>@c.base_HP_regen</td>
+        </tr>
+        <tr>
+            <th>Mana</th>
+            <td>@c.base_mana</td>
+        </tr>
+        <tr>
+            <th>Mana Regeneration</th>
+            <td>@c.base_mana_regen</td>
+        </tr>
+        <tr>
+            <th>Attack Damage</th>
+            <td>@c.base_AD</td>
+        </tr>
+        <tr>
+            <th>Attack Speed</th>
+            <td>@c.base_AS</td>
+        </tr>
+        <tr>
+            <th>Attack Range</th>
+            <td>@c.range</td>
+        </tr>
+        <tr>
+            <th>Armor</th>
+            <td>@c.base_armor</td>
+        </tr>
+        <tr>
+            <th>Magic Resistance</th>
+            <td>@c.SpellBlock</td>
+        </tr>
+        <tr>
+            <th>Movement Speed</th>
+            <td>@c.base_MS</td>
+        </tr>
+        <tr>
+            <th>Critical Strike Chance</th>
+            <td>@c.Crit</td>
+        </tr>
+        <tr>
+            <th>Life Steal</th>
+            <td>@c.LifeSteal</td>
+        </tr>
+        <tr>
+            <th>Spell Vamp</th>
+            <td>@c.SpellVamp</td>
+        </tr>
+        <tr>
+            <th>Tenacity</th>
+            <td>@c.Tenacity</td>
+        </tr>
+    </table>
 
-<h2>@c.Name</h2>
-<p>Category: @c.Category</p>
-
-
-<table style="float:left;">
-    <tr>
-        <th>Health</th>
-        <td>@c.Hp</td>
-    </tr>
-    <tr>
-        <th>Health Regeneration</th>
-        <td>@c.HpRegen</td>
-    </tr>
-    <tr>
-        <th>Mana</th>
-        <td>@c.Mp</td>
-    </tr>
-    <tr>
-        <th>Mana Regeneration</th>
-        <td>@c.MpRegen</td>
-    </tr>
-    <tr>
-        <th>Attack Damage</th>
-        <td>@c.AttackDamage</td>
-    </tr>
-    <tr>
-        <th>Attack Speed</th>
-        <td>@c.AttackSpeedOffset</td>
-    </tr>
-    <tr>
-        <th>Attack Range</th>
-        <td>@c.AttackRange</td>
-    </tr>
-    <tr>
-        <th>Armor</th>
-        <td>@c.Armor</td>
-    </tr>
-    <tr>
-        <th>Magic Resistance</th>
-        <td>@c.SpellBlock</td>
-    </tr>
-    <tr>
-        <th>Movement Speed</th>
-        <td>@c.MoveSpeed</td>
-    </tr>
-    <tr>
-        <th>Critical Strike Chance</th>
-        <td>@c.Crit</td>
-    </tr>
-    <tr>
-        <th>Life Steal</th>
-        <td>@c.LifeSteal</td>
-    </tr>
-    <tr>
-        <th>Spell Vamp</th>
-        <td>@c.SpellVamp</td>
-    </tr>
-    <tr>
-        <th>Tenacity</th>
-        <td>@c.Tenacity</td>
-    </tr>
-</table>
-
-<!--I have tried to implement a dummy stat calculator, but having a lot of trouble with it.
-I think it would be a lot easier once we have the database and API set up so no need to create
-dummy data for it. So fell free to edit this howevery you want-->
+    <!--I have tried to implement a dummy stat calculator, but having a lot of trouble with it.
+    I think it would be a lot easier once we have the database and API set up so no need to create
+    dummy data for it. So fell free to edit this howevery you want-->
 
 
-<section class="item-container">
-    @foreach (var item in ViewBag.availableItems)
-    {
-        <div class="item-grid">
-            <p>@item.Name</p>
-        </div>
-    }
-</section>
+    <section class="item-container">
+        @foreach (var item in ViewBag.availableItems)
+        {
+            <div class="item-grid">
+                <p>@item.Name</p>
+            </div>
+        }
+    </section>
 
 
-<p>@Html.ActionLink("Return Back", "Index","")</p>
+    <p>@Html.ActionLink("Return Back", "Index","Champions")</p>
+    </body>
+</html>

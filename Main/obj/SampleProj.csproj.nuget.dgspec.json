@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {}
+    "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj": {
+    "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
+        "projectUniqueName": "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj",
         "projectName": "SampleProj",
-        "projectPath": "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\SampleProj.csproj",
+        "projectPath": "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj",
         "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Justin\\Source\\Repos\\CMPT276\\Main\\obj\\",
+        "outputPath": "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",

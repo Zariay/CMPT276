@@ -39,28 +39,28 @@ namespace SampleProj.Repository
                 }
 
                 var s = champ.Stats;
-
-                c.Armor = s.Armor;
-                c.ArmorPerLevel = s.ArmorPerLevel;
-                c.AttackDamage = s.AttackDamage;
-                c.AttackDamagePerLevel = s.AttackDamagePerLevel;
-                c.AttackRange = s.AttackRange;
-                c.AttackSpeedOffset = s.AttackSpeedOffset;
-                c.AttackSpeedPerLevel = s.AttackSpeedPerLevel;
+               
+                c.base_armor = s.Armor;
+                c.armor_growth = s.ArmorPerLevel;
+                c.base_AD = s.AttackDamage;
+                c.AD_growth = s.AttackDamagePerLevel;
+                c.range = s.AttackRange;
+                c.base_AS = s.AttackSpeedOffset;
+                c.AS_growth = s.AttackSpeedPerLevel;
                 c.Crit = s.Crit;
                 c.CritPerLevel = s.CritPerLevel;
-                c.Hp = s.Hp;
-                c.HpPerLevel = s.HpPerLevel;
-                c.HpRegen = s.HpRegen;
-                c.HpRegenPerLevel = s.HpRegenPerLevel;
-                c.MoveSpeed = s.MoveSpeed;
-                c.Mp = s.Mp;
-                c.MpPerLevel = s.MpPerLevel;
-                c.MpRegen = s.MpRegen;
-                c.MpRegenPerLevel = s.MpRegenPerLevel;
+                c.base_HP = s.Hp;
+                c.HP_growth = s.HpPerLevel;
+                c.base_HP_regen = s.HpRegen;
+                c.HP_regen_growth = s.HpRegenPerLevel;
+                c.base_MS = s.MoveSpeed;
+                c.base_mana = s.Mp;
+                c.mana_growth = s.MpPerLevel;
+                c.base_mana_regen = s.MpRegen;
+                c.mana_regen_growth = s.MpRegenPerLevel;
                 c.SpellBlock = s.SpellBlock;
                 c.SpellBlockPerLevel = s.SpellBlockPerLevel;
-                
+
                 _champions.Add(c);
             }
 
