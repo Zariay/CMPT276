@@ -100,7 +100,7 @@ namespace SampleProj.Models
         public double ability_power { get; set; }         // AP
         public int magic_pen {  get; set; }            // AP lethality
         public double percent_MR_pen {  get; set; }       // MR pen %
-        public double armor_penetration {  get; set; }            // lethality
+        public double armor_penetration {  get; set; }     // lethality
         public double percent_AR_pen { get; set; }        // armor pen %
         public int gold_generation { get; set; }          // gold gained per second
 

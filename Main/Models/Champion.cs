@@ -44,7 +44,7 @@ namespace SampleProj.Models
         public double mana_growth { get; set; }
         public double base_mana_regen { get; set; }
         public double mana_regen_growth { get; set; }
-        public double base_energy {  get; set; } // alternative resource bar
+        public double base_energy { get; set; } // alternative resource bar
         public double base_energy_regen { get; set; } // alternative resource regen
 
         // Offensive statistics
@@ -60,11 +60,20 @@ namespace SampleProj.Models
         public double MR_growth { get; set; }
 
         // Other statistics
-        public int range { get; set; }
+        public double range { get; set; } //changed to double from int
         public double base_MS { get; set; }
-        public int base_gold_generation {  get; set; } 
+        public int base_gold_generation { get; set; }
         public double AS_ratio { get; set; }
 
+        //added the following just in case
+        public double Crit { get; set; }
+        public double CritPerLevel {  get; set; }
+        public double SpellBlock {  get; set; }
+        public double SpellBlockPerLevel {  get; set; }
+        public double LifeSteal { get; set; } = 0;
 
+        public double SpellVamp { get; set; } = 0;
+
+        public double Tenacity { get; set; } = 0;
     }
 }

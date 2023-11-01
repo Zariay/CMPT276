@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\SampleProj.csproj": {}
+    "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\SampleProj.csproj": {
+    "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\SampleProj.csproj",
+        "projectUniqueName": "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj",
         "projectName": "SampleProj",
-        "projectPath": "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\SampleProj.csproj",
-        "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexs\\Desktop\\CMPT276\\Main\\obj\\",
+        "projectPath": "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\SampleProj.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\source\\repos\\CMPT276\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,6 +53,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "RiotSharp": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [
