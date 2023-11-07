@@ -81,7 +81,7 @@ namespace SampleProj.Repository
 
         public List<Champion> GetChampionsByCategory(string category)
         {
-            return _champions.Where(champion => champion.Category == category).ToList();
+            return _champions.Where(champion => champion.Category.Contains(category)).ToList();
         }
 
         public List<Champion> GetChampionsByPartialName(string name)
