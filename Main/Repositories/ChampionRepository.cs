@@ -32,6 +32,8 @@ namespace SampleProj.Repository
                 Champion c = new Champion();
                 c.Name = champ.Name;
                 c.ImageUrl = champ.Image.Full;
+                c.Category = String.Join(", ", champ.Tags.Select(tag => tag.ToString()));
+
                 
                 if (c.ImageUrl == null)
                 {
