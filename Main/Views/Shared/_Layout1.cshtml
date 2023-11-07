@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +12,14 @@
     <link rel="stylesheet" href="~/MyWebApp.styles.css" asp-append-version="true" />
     <style>
         html {
-    position: relative;
-    min-height: 100%;
-    background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
+            position: relative;
+            min-height: 100%;
+        @if (Model?.ChampionData?.ImageUrl != null)
+        {
+            <style>background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
+        </style>
+        }
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,43 +27,52 @@
     }
 
     body {
-        /* bottom = footer height */
-        margin: 60px 0 60px;
-        background-color: #111; /* Dark background color */
+    /* bottom = footer height */
+    margin: 60px 0 60px;
+    background-color: #111; /* Dark background color */
+    @if (Model?.ChampionData?.ImageUrl != null)
+{
+    <style>
         background: url(@Model.ChampionData.ImageUrl) no-repeat center center fixed;
-        background-size: cover;
-        color: #fff; /* White text color */
-        font-family: 'Arial', sans-serif; /* Choose a suitable font */
+    </style>
+}
+
+    background-size: cover;
+    color: #fff; /* White text color */
+    font-family: 'Arial', sans-serif; /* Choose a suitable font */
     }
 
     footer {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 100px;
-        width: 100%;
-        overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
     }
 
     </style>
-    
+
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyWebApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Login">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts"
+                                asp-action="Login">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -80,4 +95,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
