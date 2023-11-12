@@ -33,39 +33,33 @@ namespace SampleProj.Controllers
                 new Item(),
                 new Item()
             };
-            AvailableItems[0].Name = "Test_Item_1";
-            AvailableItems[0].HealthBonus = 50d;
-            AvailableItems[0].HealthRegenerationBonus = 3.4d;
-            AvailableItems[0].CriticalStrikeChanceBonus = 0.25;
-            AvailableItems[0].AttackSpeedBonus = 0.20;
-            AvailableItems[0].AttackRangeBonus = 75;
-            AvailableItems[0].ArmorBonus = 55;
-            AvailableItems[0].MagicResistanceBonus = 35;
-            AvailableItems[0].LifeStealBonus = 0.12;
-            AvailableItems[0].MovementSpeedBonus = 355;
+            AvailableItems[0].Name = "Morellonomicon";
+            AvailableItems[0].bonus_ap = 90d;
+            AvailableItems[0].HealthBonus = 200d;
+            AvailableItems[0].bonus_magic_pen = 10;
 
-            AvailableItems[1].Name = "Test_Item_2";
-            AvailableItems[1].HealthBonus = 14d;
-            AvailableItems[1].HealthRegenerationBonus = 1.7d;
-            AvailableItems[1].MovementSpeedBonus = 100;
+            AvailableItems[1].Name = "Deathcap";
+            AvailableItems[1].bonus_ap = 120d;
+            AvailableItems[1].bonus_ap_amp = 0.40;
 
+            AvailableItems[2].Name = "Doran's Ring";
+            AvailableItems[2].bonus_ap = 18d;
+            AvailableItems[2].HealthBonus = 90d;
 
-            AvailableItems[2].Name = "Iron Helm";
-            AvailableItems[2].ArmorBonus = 20;
-            AvailableItems[3].Name = "Magical Ring";
-            AvailableItems[3].ManaBonus = 30;
-            AvailableItems[4].Name = "Light-weight Boots";
-            AvailableItems[4].MovementSpeedBonus = 20;
-            AvailableItems[5].Name = "Vampire Sword";
-            AvailableItems[5].LifeStealBonus = 0.2;
-            AvailableItems[6].Name = "Magical Shield";
-            AvailableItems[6].MagicResistanceBonus = 15;
-            AvailableItems[7].Name = "Healing Neckless";
-            AvailableItems[7].HealthRegenerationBonus = 1.5;
-            AvailableItems[8].Name = "Metal Club";
-            AvailableItems[8].CriticalStrikeDamageBonus = 20;
-            AvailableItems[9].Name = "Scope";
-            AvailableItems[9].CriticalStrikeChanceBonus = 0.2;
+            AvailableItems[3].Name = "Amplifying Tome";
+            AvailableItems[3].bonus_ap = 20d;
+
+            AvailableItems[4].Name = "Doran's Blade";
+            AvailableItems[4].AttackDamageBonus = 10d;
+            AvailableItems[4].HealthBonus = 100d;
+
+            AvailableItems[5].Name = "Doran's Shield";
+            AvailableItems[5].HealthBonus = 110d;
+            AvailableItems[5].HealthRegenerationBonus = 4d;
+
+            AvailableItems[6].Name = "Ruby Crystal";
+            AvailableItems[6].HealthBonus = 150d;
+
             EquippedItems = new List<Item>();
             ChampStat = new ChampionStat();
             // FOR TESTING PURPOSES
@@ -87,7 +81,10 @@ namespace SampleProj.Controllers
             ch.base_AD = champ.base_AD;
             ch.AD_growth = champ.AD_growth;
             ch.range = champ.range;
-            ch.base_AS = champ.base_AS;
+            //ch.base_AS = champ.base_AS;
+            ch.base_AS = 0.625;
+            //ch.AS_ratio = champ.base_AS;
+            ch.AS_ratio = 0.625;
             ch.AS_growth = champ.AS_growth;
             ch.Crit = champ.Crit;
             ch.CritPerLevel = champ.CritPerLevel;
@@ -111,7 +108,9 @@ namespace SampleProj.Controllers
             ViewBag.equippedItems = EquippedItems;
 
             //calculate_stats();
-            ViewData["i"] = ch as Champion;
+            calculate_stats();
+
+            ViewData["i"] = ChampStat as ChampionStat;
             return View("Index");
         }
 
@@ -127,7 +126,7 @@ namespace SampleProj.Controllers
         // calculate_stats should be called when there are changes to items, or
         // changes to the champion being looked at.
         
-        /*
+        
         private void calculate_stats()
         {
             // Reset ChampStat to the base state.
@@ -144,7 +143,7 @@ namespace SampleProj.Controllers
             double bonus_mana_regen_total = 0d;
             double bonus_AD_total = 0d;
             double bonus_AS_total = 0d;
-            int bonus_range_total = 0;
+            double bonus_range_total = 0;
             double bonus_armor_total = 0d;
             double bonus_MR_total = 0d;
             double bonus_MS_total = 0d;
@@ -199,12 +198,12 @@ namespace SampleProj.Controllers
                 // then the total reduction will be (1-0.1)*(1-0.2)*(1-0.15) = 0.612
                 // not 0.55
                 // 
-                // To calculate the final percent, for each item j, compute
-                // current bonus = current bonus * (1 - j)
+                // To calculate the final percent, for item j, compute
+                // current bonus = current bonus * (1 - j.bonus)
                 // for all j
                 //
-                // then, we have the multiplier for MR after applying the percent reductions.
-                // To get the percent penetration, subtract this from 1.
+                // then, we have the percentage calculation. If you want the
+                // percent after application, do 1 - total
                 bonus_percent_MR_pen_total *= (1 - item.bonus_percent_MR_pen);
                 bonus_percent_AR_pen_total *= (1 - item.bonus_percent_AR_pen);
                 bonus_slow_res_total *= (1 - item.slow_res_bonus);
@@ -249,10 +248,12 @@ namespace SampleProj.Controllers
             //
             // Bonus AS here is from the items, but in the canonical calculation is also
             // from growth, which is why this formula may look different
+            /*
             ChampStat.AttackSpeed = ((base_stats.base_AS / base_stats.AS_ratio) + bonus_AS_total
                                     + ((ChampStat.Level - 1) * base_stats.AS_growth))
                                     * base_stats.AS_ratio;
-
+            */
+            ChampStat.AttackSpeed = base_stats.base_AS;
             // Range computation
             // Range = Base range + bonus range
             ChampStat.AttackRange = base_stats.range + bonus_range_total;
@@ -334,10 +335,9 @@ namespace SampleProj.Controllers
 
             ChampStat.Tenacity = bonus_tenacity_total;
 
-            // Slow resist computation
-            // We now subtract by 1 to undo our above multiplications by (1-j)
+            // Slow resist computation, this is our % applied to all slows.
 
-            ChampStat.slow_resist = (1 - bonus_slow_res_total);
+            ChampStat.slow_resist =  bonus_slow_res_total;
 
             // Energy computation
             // Energy is not influenced by any items
@@ -377,8 +377,8 @@ namespace SampleProj.Controllers
             ChampStat.magic_pen = bonus_magic_pen_total;
 
             // percent magic pen computation
-            // Compute (1-total) as defined in the for loop above.
-            ChampStat.percent_MR_pen = (1 - bonus_percent_MR_pen_total);
+            // We do not compute (1-total) since we are not calculating the opponents MR.
+            ChampStat.percent_MR_pen = bonus_percent_MR_pen_total;
 
             // armor penetration computation
             // This is calculated directly from lethality, but is not 1 to 1
@@ -387,7 +387,7 @@ namespace SampleProj.Controllers
 
             // percent armor pen computation
             // This is also computed multiplicatively, details are above in the for loop.
-            ChampStat.percent_AR_pen = (1 - bonus_percent_AR_pen_total);
+            ChampStat.percent_AR_pen = bonus_percent_AR_pen_total;
 
             // Gold generation computation
             // This is additive, and simple enough.
@@ -396,7 +396,7 @@ namespace SampleProj.Controllers
 
 
         }
-        */
+        
 
 
 
