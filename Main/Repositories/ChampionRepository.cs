@@ -39,9 +39,7 @@ namespace SampleProj.Repository
                 {
                     System.Diagnostics.Debug.WriteLine("image is null");
                 }
-
                 var s = champ.Stats;
-               
                 c.base_armor = s.Armor;
                 c.armor_growth = s.ArmorPerLevel;
                 c.base_AD = s.AttackDamage;
@@ -62,6 +60,7 @@ namespace SampleProj.Repository
                 c.mana_regen_growth = s.MpRegenPerLevel;
                 c.SpellBlock = s.SpellBlock;
                 c.SpellBlockPerLevel = s.SpellBlockPerLevel;
+                c.AS_ratio = s.AttackSpeedOffset;
 
                 _champions.Add(c);
             }

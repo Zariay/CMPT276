@@ -83,7 +83,7 @@ namespace SampleProj.Models
         public double ManaRegeneration { get; set; }       // MP5
         public double AttackDamage { get; set; }              // AD
         public double AttackSpeed { get; set; }            // AS (attacks per second)
-        public int AttackRange { get; set; }               // AR
+        public double AttackRange { get; set; }               // AR
         public double Armor { get; set; }                     // AR
         public double MagicResistance { get; set; }           // MR
         public double MovementSpeed { get; set; }             // MS
