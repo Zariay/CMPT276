@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Configuration;
 using NuGet.Protocol.Plugins;
 using RiotSharp;
 using RiotSharp.Endpoints.StaticDataEndpoint.Item;
@@ -75,6 +76,13 @@ namespace SampleProj.Controllers
             ViewBag.availableItems = AvailableItems;
             ViewBag.equippedItems = EquippedItems;
         }
+
+        /*public ActionResult Equip(Item thing)
+        {
+            
+            calculate_stats();
+            return View("Index");
+        }*/
 
         public IActionResult Index(Champion champ)
         {   
