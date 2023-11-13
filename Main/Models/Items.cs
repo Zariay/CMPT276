@@ -1,4 +1,5 @@
 using Microsoft.Identity.Client;
+using RiotSharp.Endpoints.StaticDataEndpoint.Item;
 using System;
 using System.Security.Permissions;
 
@@ -75,6 +76,8 @@ namespace SampleProj.Models
     public class ChampionStat
     {
         public Champion? ChampionData { get; set; }                 // The Champion
+
+        public List<ItemStatic> items;
         public int Level { get; set; }                        // Current level
         public double Health { get; set; }                    // HP
         public double HealthRegeneration { get; set; }     // HP5

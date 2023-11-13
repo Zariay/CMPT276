@@ -8,6 +8,7 @@
     var c = (ChampionStat)@ViewData["i"];
     var cb = c.ChampionData;
     string splash = @cb.Name + "_0.jpg";
+    var itemsl = c.items;
 }
 
 <style>
@@ -28,6 +29,26 @@
         font-family: 'Arial', sans-serif; /* Choose a suitable font */
     }
 </style>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .scrollable-container {
+        max-height: 400px; /* Set the maximum height for the scrollable container */
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid #ccc; /* Add a border for aesthetics */
+    }
+
+    .item-image {
+        max-width: 100%; /* Make sure images don't exceed their container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space beneath images */
+        margin-bottom: 10px; /* Add some spacing between images */
+    }
+</style>
+
 <html>
     <body>
     <h2>@cb.Name</h2>
@@ -147,6 +168,31 @@
             <td>@c.energy_regen</td>
         </tr>
     </table>
+
+
+
+    <!--
+        <form id="form1" runat="server">
+            <div class="scrollable-container">
+                <%-- Iterate through the list of RiotSharp items and display images --%>
+                <% foreach (var item in riotSharpItems) { %>
+                <img class="item-image" src="<%= item.Image.Full %>" alt="<%= item.Name %>" />
+                <% } %>
+            </div>
+        </form>
+        -->
+
+    <section class="item-container">
+        @foreach (var item in itemsl)
+        {
+            <div class="item-grid">
+                <img class= "item-image" src="@item.Image.Full" alt="@item.Name" />
+            </div>
+        }
+    </section>
+    
+
+z
 
     <!--I have tried to implement a dummy stat calculator, but having a lot of trouble with it.
     I think it would be a lot easier once we have the database and API set up so no need to create
