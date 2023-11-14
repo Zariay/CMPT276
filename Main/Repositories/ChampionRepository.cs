@@ -10,22 +10,24 @@ using SampleProj.Models;
 using RiotSharp;
 using Azure;
 using Newtonsoft.Json;
+using RiotSharp.Endpoints.StaticDataEndpoint.Item;
 
 namespace SampleProj.Repository
 {
     public class ChampionRepository
     {
        private List<Champion> _champions;
-       //private readonly RiotApi _riotApi; 
+
 
        public ChampionRepository()
        {
             _champions = new List<Champion>();
-
             var api = RiotApi.GetDevelopmentInstance("RGAPI-01900a91-e2e5-480f-948d-7699ac5b2722");
             var versions = api.StaticData.Versions.GetAllAsync().Result;
             var latest = versions[0];
             var champs = api.StaticData.Champions.GetAllAsync(latest).Result.Champions.Values;
+
+
 
             foreach( var champ in champs )
             {

@@ -8,6 +8,7 @@
     var c = (ChampionStat)@ViewData["i"];
     var cb = c.ChampionData;
     string splash = @cb.Name + "_0.jpg";
+    var itemsl = c.items;
 }
 
 <style>
@@ -28,6 +29,26 @@
         font-family: 'Arial', sans-serif; /* Choose a suitable font */
     }
 </style>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .scrollable-container {
+        max-height: 400px; /* Set the maximum height for the scrollable container */
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid #ccc; /* Add a border for aesthetics */
+    }
+
+    .item-image {
+        max-width: 100%; /* Make sure images don't exceed their container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space beneath images */
+        margin-bottom: 10px; /* Add some spacing between images */
+    }
+</style>
+
 <html>
     <body>
     <h2>@cb.Name</h2>
@@ -148,21 +169,62 @@
         </tr>
     </table>
 
-    <!--I have tried to implement a dummy stat calculator, but having a lot of trouble with it.
-    I think it would be a lot easier once we have the database and API set up so no need to create
-    dummy data for it. So fell free to edit this howevery you want-->
-
-
     <section class="item-container">
-        @foreach (var item in ViewBag.availableItems)
+        @foreach (var item in itemsl)
         {
-            <div class="item-grid">
-                <p>@item.Name</p>
+            <div class="item-grid" onclick="selectItem('https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full', '@item.Name')">
+                <button>
+                    <img class="item-image" src="https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full" alt="@item.Name" />
+                </button>
             </div>
         }
     </section>
 
+    <style>
+        .selected-items {
+            position: fixed;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 
+    <div class="selected-items">
+
+    </div>
+
+    <script>
+        var selectedItems = [];
+
+        function selectItem(itemImage, itemName) {
+            selectedItems.push({ image: itemImage, name: itemName });
+
+            if (selectedItems.length > 6) {
+                selectedItems.shift();
+            }
+
+            updateItems();
+        }
+
+        function updateItems() {
+            // Get the container element
+            var container = document.querySelector('.selected-items');
+
+            // Clear the existing content
+            container.innerHTML = '';
+
+            for (var i = 0; i < selectedItems.length; i++) {
+                var selectedItem = selectedItems[i];
+
+                var img = document.createElement('img');
+                img.src = selectedItem.image;
+                img.alt = selectedItem.name; // Set alt text to the item name
+
+                container.appendChild(img);
+            }
+        }
+    </script>
+  
     <p>@Html.ActionLink("Return Back", "Index","Champions","")</p>
     </body>
 </html>

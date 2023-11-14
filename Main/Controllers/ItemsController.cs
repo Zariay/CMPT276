@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Configuration;
 using NuGet.Protocol.Plugins;
+using RiotSharp;
+using RiotSharp.Endpoints.StaticDataEndpoint.Item;
 using SampleProj.Models;
 using SampleProj.Repository;
 
@@ -33,6 +36,10 @@ namespace SampleProj.Controllers
                 new Item(),
                 new Item()
             };
+
+            
+
+
             AvailableItems[0].Name = "Morellonomicon";
             AvailableItems[0].bonus_ap = 90d;
             AvailableItems[0].HealthBonus = 200d;
@@ -63,12 +70,19 @@ namespace SampleProj.Controllers
             EquippedItems = new List<Item>();
             ChampStat = new ChampionStat();
             // FOR TESTING PURPOSES
-            EquippedItems.Add(AvailableItems[0]);
-            EquippedItems.Add(AvailableItems[1]);
+           // EquippedItems.Add(AvailableItems[0]);
+            //EquippedItems.Add(AvailableItems[1]);
             // FOR TESTING PURPOSES
             ViewBag.availableItems = AvailableItems;
             ViewBag.equippedItems = EquippedItems;
         }
+
+        /*public ActionResult Equip(Item thing)
+        {
+            
+            calculate_stats();
+            return View("Index");
+        }*/
 
         public IActionResult Index(Champion champ)
         {   
@@ -103,6 +117,7 @@ namespace SampleProj.Controllers
 
             // set the new champion data to be part of the current stat calculation.
             ChampStat.ChampionData = ch;
+            ChampStat.items = new List<ItemStatic>(getItemList().Items.Values);
             //setting the ViewBag
             ViewBag.availableItems = AvailableItems;
             ViewBag.equippedItems = EquippedItems;
@@ -111,7 +126,16 @@ namespace SampleProj.Controllers
             calculate_stats();
 
             ViewData["i"] = ChampStat as ChampionStat;
+            
             return View("Index");
+        }
+
+        ItemListStatic getItemList()
+        {
+            var api = RiotApi.GetDevelopmentInstance("RGAPI-01900a91-e2e5-480f-948d-7699ac5b2722");
+            var versions = api.StaticData.Versions.GetAllAsync().Result;
+            var latest = versions[0];
+            return api.StaticData.Items.GetAllAsync(latest).Result;
         }
 
         //commenting out calculating stats while attempting to get the api working
