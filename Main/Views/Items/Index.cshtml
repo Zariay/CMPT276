@@ -169,29 +169,61 @@
         </tr>
     </table>
 
-
-
-    <!--
-        <form id="form1" runat="server">
-            <div class="scrollable-container">
-                <%-- Iterate through the list of RiotSharp items and display images --%>
-                <% foreach (var item in riotSharpItems) { %>
-                <img class="item-image" src="<%= item.Image.Full %>" alt="<%= item.Name %>" />
-                <% } %>
-            </div>
-        </form>
-        -->
-
     <section class="item-container">
         @foreach (var item in itemsl)
         {
-            <div class="item-grid">
+            <div class="item-grid" onclick="selectItem('https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full', '@item.Name')">
                 <button>
                     <img class="item-image" src="https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full" alt="@item.Name" />
                 </button>
             </div>
         }
     </section>
+
+    <style>
+        .selected-items {
+            position: fixed;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+
+    <div class="selected-items">
+
+    </div>
+
+    <script>
+        var selectedItems = [];
+
+        function selectItem(itemImage, itemName) {
+            selectedItems.push({ image: itemImage, name: itemName });
+
+            if (selectedItems.length > 6) {
+                selectedItems.shift();
+            }
+
+            updateItems();
+        }
+
+        function updateItems() {
+            // Get the container element
+            var container = document.querySelector('.selected-items');
+
+            // Clear the existing content
+            container.innerHTML = '';
+
+            for (var i = 0; i < selectedItems.length; i++) {
+                var selectedItem = selectedItems[i];
+
+                var img = document.createElement('img');
+                img.src = selectedItem.image;
+                img.alt = selectedItem.name; // Set alt text to the item name
+
+                container.appendChild(img);
+            }
+        }
+    </script>
   
     <p>@Html.ActionLink("Return Back", "Index","Champions","")</p>
     </body>

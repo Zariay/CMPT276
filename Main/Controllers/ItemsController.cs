@@ -70,8 +70,8 @@ namespace SampleProj.Controllers
             EquippedItems = new List<Item>();
             ChampStat = new ChampionStat();
             // FOR TESTING PURPOSES
-            EquippedItems.Add(AvailableItems[0]);
-            EquippedItems.Add(AvailableItems[1]);
+           // EquippedItems.Add(AvailableItems[0]);
+            //EquippedItems.Add(AvailableItems[1]);
             // FOR TESTING PURPOSES
             ViewBag.availableItems = AvailableItems;
             ViewBag.equippedItems = EquippedItems;
