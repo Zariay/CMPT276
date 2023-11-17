@@ -1,0 +1,124 @@
+﻿@model ChampionStat
+
+@{
+    var c = (ChampionStat)@ViewData["i"];
+    var cb = c.ChampionData;
+}
+
+<!-- Your HTML to display the updated content -->
+<div id="statsContainer">
+    <table style="float:left;">
+        <tr>
+            <th>Level</th>
+            <td>@c.Level</td>
+        </tr>
+        <tr>
+            <th>Health</th>
+            <td>@c.Health</td>
+        </tr>
+        <tr>
+            <th>Health Regeneration</th>
+            <td>@c.HealthRegeneration</td>
+        </tr>
+        <tr>
+            <th>Health/Shield power</th>
+            <td>@c.heal_shield_power</td>
+        </tr>
+        <tr>
+            <th>Mana</th>
+            <td>@c.Mana</td>
+        </tr>
+        <tr>
+            <th>Mana Regeneration</th>
+            <td>@c.ManaRegeneration</td>
+        </tr>
+        <tr>
+            <th>Ability Power</th>
+            <td>@c.ability_power</td>
+        </tr>
+        <tr>
+            <th>Ability Haste</th>
+            <td>@c.ability_haste</td>
+        </tr>
+        <tr>
+            <th>Magic Penetration (Flat)</th>
+            <td>@c.magic_pen</td>
+        </tr>
+        <tr>
+            <th>Magic Penetration (%)</th>
+            <td>@c.percent_MR_pen</td>
+        </tr>
+        <tr>
+            <th>Attack Damage</th>
+            <td>@c.AttackDamage</td>
+        </tr>
+        <tr>
+            <th>Armor Penetration (Flat)</th>
+            <td>@c.armor_penetration</td>
+        </tr>
+        <tr>
+            <th>Armor Penetration (%)</th>
+            <td>@c.percent_AR_pen</td>
+        </tr>
+        <tr>
+            <th>Attack Speed</th>
+            <td>@c.AttackSpeed</td>
+        </tr>
+        <tr>
+            <th>Attack Range</th>
+            <td>@c.AttackRange</td>
+        </tr>
+        <tr>
+            <th>Critical Strike Chance</th>
+            <td>@c.CriticalStrikeChance</td>
+        </tr>
+        <tr>
+            <th>Critical Strike Damage</th>
+            <td>@c.CriticalStrikeDamage</td>
+        </tr>
+        <tr>
+            <th>Armor</th>
+            <td>@c.Armor</td>
+        </tr>
+        <tr>
+            <th>Magic Resistance</th>
+            <td>@c.MagicResistance</td>
+        </tr>
+        <tr>
+            <th>Movement Speed</th>
+            <td>@c.MovementSpeed</td>
+        </tr>
+        <tr>
+            <th>Life Steal</th>
+            <td>@c.LifeSteal</td>
+        </tr>
+        <tr>
+            <th>Spell Vamp</th>
+            <td>@c.SpellVamp</td>
+        </tr>
+        <tr>
+            <th>Omni Vamp</th>
+            <td>@c.Omnivamp</td>
+        </tr>
+        <tr>
+            <th>Tenacity</th>
+            <td>@c.Tenacity</td>
+        </tr>
+        <tr>
+            <th>Slow Resistance</th>
+            <td>@c.slow_resist</td>
+        </tr>
+        <tr>
+            <th>Passive Gold</th>
+            <td>@c.gold_generation</td>
+        </tr>
+        <tr>
+            <th>Energy</th>
+            <td>@c.energy</td>
+        </tr>
+        <tr>
+            <th>Energy Regeneration</th>
+            <td>@c.energy_regen</td>
+        </tr>
+    </table>
+</div>
