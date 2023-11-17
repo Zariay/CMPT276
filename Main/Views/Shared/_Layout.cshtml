@@ -1,5 +1,4 @@
-﻿@* _Layout.cshtml file. Located in Views/Shared folder *@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,8 +7,6 @@
     <title>@ViewData["Title"] - SampleProj</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    @* Dont see the need of this *@
-    @* <link rel="stylesheet" href="~/SampleProj.styles.css" asp-append-version="true" /> *@
     <script>
         $(document).ready(function () {
             // Handle form submission using AJAX
@@ -24,72 +21,44 @@
             });
         });
     </script>
-
-
 </head>
 
-<body>
-    <!-- remove the white header above
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SampleProj</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Login">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
-                                asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    -->
-    <div class="container">
+<body style="margin: 0;">
 
-        @* ADDED FORM *@
-        <form id="searchForm" method="get" action="/Champions/Index"
-            style="background-color: rgba(0, 0, 0, 0.7); padding: 5px; text-align: center;">
-            <input type="text" id="searchTerm" name="searchTerm" placeholder="Search Champions"
-                >
-            <button type="submit"
-                >Search</button>
+    <!-- Fixed header with filter and search buttons -->
+    <header style="position: fixed; top: 0; width: 100%; background-color: rgba(0, 0, 0, 0.7); text-align: center; padding: 5px; z-index: 100;">
+        <form id="searchForm" method="get" action="/Champions/Index">
+            <input type="text" id="searchTerm" name="searchTerm" placeholder="Search Champions">
+            <button type="submit">Search</button>
         </form>
-        <div style="text-align: center; margin-top: 5px; margin-bottom: 5px;">
+        <div>
             <a href="/Champions/Filter?category=Fighter" class="btn btn-primary custom-filter-btn">Fighter</a>
             <a href="/Champions/Filter?category=Mage" class="btn btn-primary custom-filter-btn">Mage</a>
             <a href="/Champions/Filter?category=Assassin" class="btn btn-primary custom-filter-btn">Assassin</a>
             <a href="/Champions/Filter?category=Tank" class="btn btn-primary custom-filter-btn">Tank</a>
             <a href="/Champions/Filter?category=Support" class="btn btn-primary custom-filter-btn">Support</a>
             <a href="/Champions/Filter?category=Marksman" class="btn btn-primary custom-filter-btn">Marksman</a>
-            <!-- Add more buttons for other categories -->
         </div>
+        
+    </header>
 
-        @* <main role="main" class="pb-3">
-        @RenderBody()
-        </main> *@
+    <!-- Padding to prevent content from being hidden behind the fixed header -->
+    <div style="height: 60px;"></div>
 
-        <main role="main" class="pb-3" style="overflow-y: auto; max-height: 500px;">
+    <!-- Scrollable main content area -->
+    <div class="container" style="overflow-y: auto;">
+        <main role="main" class="pb-3">
             @RenderBody()
         </main>
-
-
-
-
     </div>
-    <footer class="border-top footer text-muted">
+
+    <!-- Footer -->
+    @* <footer class="border-top footer text-muted" style="background-color: rgba(0, 0, 0, 0.7); text-align: center; padding: 5px;">
         <div class="container">
             &copy; 2023 - SampleProj - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer> *@
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
