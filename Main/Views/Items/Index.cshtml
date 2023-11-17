@@ -12,6 +12,10 @@
 }
 
 <style>
+
+    body1{
+
+    }
     html {
         background: url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/@splash") no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -28,11 +32,18 @@
         color: #fff; /* White text color */
         font-family: 'Arial', sans-serif; /* Choose a suitable font */
     }
-</style>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
+    table {
+        background-color: rgba(0, 0, 0, 0.5); /* 0.5 sets the transparency */
+        color: white;
+        border-collapse: collapse;
+        width: 45%; /* Set the table width to 80% of the parent container */
+        margin: auto; /* Center the table horizontally */
+    }
+
+    th, td {
+        padding: 5px;
+        border: 1px solid white;
     }
 
     .scrollable-container {
@@ -42,156 +53,169 @@
     }
 
     .item-image {
-        max-width: 100%; /* Make sure images don't exceed their container */
+        
         height: auto; /* Maintain aspect ratio */
         display: block; /* Remove extra space beneath images */
-        margin-bottom: 10px; /* Add some spacing between images */
+        background-color: transparent;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .selected-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; /* Add margin to the top */
+    }
+
+    .selected-items img {
+        margin: 0 5px; /* Adjust the margin as needed for spacing between selected items */
+    }
+
+    h2{
+        margin-left: 50%;
     }
 </style>
 
 <html>
     <body>
-    <h2>@cb.Name</h2>
-
+    <h1><strong>@cb.Name</strong></h1>
 
     <table style="float:left;">
         <tr>
             <th>Level</th>
-            <td>@c.Level</td>
-        </tr>
-        <tr>
+            <td>
+                <select id="dropdown" onchange="displaySelectedOption()">
+                    <option value="option1">1</option>
+                    <option value="option2">2</option>
+                    <option value="option3">3</option>
+                    <option value="option4">4</option>
+                    <option value="option5">5</option>
+                    <option value="option6">6</option>
+                    <option value="option7">7</option>
+                    <option value="option8">8</option>
+                    <option value="option9">9</option>
+                    <option value="option10">10</option>
+                    <option value="option11">11</option>
+                    <option value="option12">12</option>
+                    <option value="option13">13</option>
+                    <option value="option14">14</option>
+                    <option value="option15">15</option>
+                    <option value="option16">16</option>
+                    <option value="option17">17</option>
+                    <option value="option18">18</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </td>
             <th>Health</th>
             <td>@c.Health</td>
         </tr>
         <tr>
             <th>Health Regeneration</th>
-            <td>@c.HealthRegeneration</td>
-        </tr>
-        <tr>
+            <td>@c.HealthRegeneration </td>
             <th>Health/Shield power</th>
             <td>@c.heal_shield_power</td>
         </tr>
         <tr>
             <th>Mana</th>
-            <td>@c.Mana</td>
-        </tr>
-        <tr>
+            <td>@c.Mana </td>
             <th>Mana Regeneration</th>
             <td>@c.ManaRegeneration</td>
         </tr>
         <tr>
             <th>Ability Power</th>
-            <td>@c.ability_power</td>
-        </tr>
-        <tr>
+            <td>@c.ability_power </td>
             <th>Ability Haste</th>
             <td>@c.ability_haste</td>
         </tr>
         <tr>
             <th>Magic Penetration (Flat)</th>
-            <td>@c.magic_pen</td>
-        </tr>
-        <tr>
+            <td>@c.magic_pen </td>
             <th>Magic Penetration (%)</th>
             <td>@c.percent_MR_pen</td>
         </tr>
         <tr>
             <th>Attack Damage</th>
-            <td>@c.AttackDamage</td>
-        </tr>
-        <tr>
+            <td>@c.AttackDamage </td>
             <th>Armor Penetration (Flat)</th>
             <td>@c.armor_penetration</td>
         </tr>
         <tr>
             <th>Armor Penetration (%)</th>
-            <td>@c.percent_AR_pen</td>
-        </tr>
-        <tr>
+            <td>@c.percent_AR_pen </td>
             <th>Attack Speed</th>
             <td>@c.AttackSpeed</td>
         </tr>
         <tr>
             <th>Attack Range</th>
-            <td>@c.AttackRange</td>
-        </tr>
-        <tr>
+            <td>@c.AttackRange </td>
             <th>Critical Strike Chance</th>
             <td>@c.CriticalStrikeChance</td>
         </tr>
         <tr>
             <th>Critical Strike Damage</th>
-            <td>@c.CriticalStrikeDamage</td>
-        </tr>
-        <tr>
+            <td>@c.CriticalStrikeDamage </td>
             <th>Armor</th>
             <td>@c.Armor</td>
         </tr>
         <tr>
             <th>Magic Resistance</th>
-            <td>@c.MagicResistance</td>
-        </tr>
-        <tr>
+            <td>@c.MagicResistance </td>
             <th>Movement Speed</th>
             <td>@c.MovementSpeed</td>
         </tr>
         <tr>
             <th>Life Steal</th>
-            <td>@c.LifeSteal</td>
-        </tr>
-        <tr>
+            <td>@c.LifeSteal </td>
             <th>Spell Vamp</th>
             <td>@c.SpellVamp</td>
         </tr>
         <tr>
             <th>Omni Vamp</th>
-            <td>@c.Omnivamp</td>
-        </tr>
-        <tr>
+            <td>@c.Omnivamp </td>
             <th>Tenacity</th>
             <td>@c.Tenacity</td>
         </tr>
         <tr>
             <th>Slow Resistance</th>
-            <td>@c.slow_resist</td>
-        </tr>
-        <tr>
+            <td>@c.slow_resist </td>
             <th>Passive Gold</th>
             <td>@c.gold_generation</td>
         </tr>
         <tr>
             <th>Energy</th>
-            <td>@c.energy</td>
-        </tr>
-        <tr>
+            <td>@c.energy </td>
             <th>Energy Regeneration</th>
             <td>@c.energy_regen</td>
         </tr>
+        <tr></tr>
+        <p>@Html.ActionLink("Return Back", "Index","Champions","")</p>
     </table>
+    <body1>
+        <section class="item-container">
+            @foreach (var item in itemsl)
+            {
+                <div class="item-grid" onclick="selectItem('https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full', '@item.Name')">
+                    <button>
+                        <img class="item-image" src="https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full" alt="@item.Name" />
+                    </button>
+                </div>
+            }
+        </section>
 
-    <section class="item-container">
-        @foreach (var item in itemsl)
-        {
-            <div class="item-grid" onclick="selectItem('https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full', '@item.Name')">
-                <button>
-                    <img class="item-image" src="https://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/@item.Image.Full" alt="@item.Name" />
-                </button>
-            </div>
-        }
-    </section>
-
-    <style>
-        .selected-items {
-            position: fixed;
-            bottom: 12%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    </style>
-
-    <div class="selected-items">
-
-    </div>
+        <h2 >Selected Items:</h2>
+        <div class="selected-items"></div>
+    </body1>
+    
 
     <script>
         var selectedItems = [];
@@ -223,8 +247,18 @@
                 container.appendChild(img);
             }
         }
+
+        function displaySelectedOption() {
+            var dropdown = document.getElementById("dropdown");
+            var selectedOption = document.getElementById("selectedOption");
+            var selectLabel = document.getElementById("selectLabel");
+
+            selectLabel.textContent = "Select an option: " + dropdown.options[dropdown.selectedIndex].text;
+            selectedOption.textContent = dropdown.options[dropdown.selectedIndex].text;
+        }
+
     </script>
   
-    <p>@Html.ActionLink("Return Back", "Index","Champions","")</p>
+    
     </body>
 </html>
